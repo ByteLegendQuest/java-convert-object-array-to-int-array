@@ -18,8 +18,8 @@ public class Challenge {
             if (objects[i] instanceof Number) {
                 array[i] = ((Number) objects[i]).intValue();
             }
-            if (objects[i] instanceof String) {
-                array[i] = Integer.parseInt((String) objects[i]);
+            if (objects[i] instanceof CharSequence) {
+                array[i] = Integer.parseInt(objects[i].toString());
             }
         }
         return array;
