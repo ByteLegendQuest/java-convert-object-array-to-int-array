@@ -15,7 +15,7 @@ public class Challenge {
     public static int[] convert(Object[] objects) {
         int[] answer = new int[objects.length];
         for (int i = 0; i < objects.length; ++i) {
-            answer[i] = (int) (Double.parseInt(objects[i].toString()));
+            answer[i] = (int) (Double.parseDouble(objects[i].toString()));
         }
         return answer;
     }
