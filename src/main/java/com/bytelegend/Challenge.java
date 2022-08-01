@@ -13,6 +13,10 @@ public class Challenge {
      * <p>For example, input `[1, 2.0, 3.1, "4.999"]`, the output is `[1, 2, 3, 4]`.
      */
     public static int[] convert(Object[] objects) {
-        return null;
+        int[] answer = new int[objects.length];
+        for (int i = 0; i < objects.length; ++i) {
+            answer[i] = (int) (Double.parseDouble(objects[i].toString()));
+        }
+        return answer;
     }
 }
