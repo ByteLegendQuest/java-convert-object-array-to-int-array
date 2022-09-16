@@ -1,5 +1,7 @@
 package com.bytelegend;
 
+import java.util.Arrays;
+
 public class Challenge {
     /**
      * Given an array containing any objects `Object[]`, convert it to `int[]` array. The objects
@@ -13,6 +15,14 @@ public class Challenge {
      * <p>For example, input `[1, 2.0, 3.1, "4.999"]`, the output is `[1, 2, 3, 4]`.
      */
     public static int[] convert(Object[] objects) {
-        return null;
+        return Arrays.stream(objects).mapToInt(it -> {
+            int result = 0;
+            if (it instanceof Number) {
+                result = ((Number) it).intValue();
+            } else if (it instanceof CharSequence) {
+                result = Integer.parseInt(it.toString());
+            }
+            return result;
+        }).toArray();
     }
 }
