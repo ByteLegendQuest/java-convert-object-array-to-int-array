@@ -26,6 +26,7 @@ public class Challenge {
                 for (int j = 0; j < charSequence.length(); j++) {
                     if(charSequence.charAt(j) == '-'){
                         minus = true;
+                        continue;
                     }
                     int d = charSequence.charAt(j) - '0';
                     val = val * 10 + d;
