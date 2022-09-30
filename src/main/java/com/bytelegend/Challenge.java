@@ -22,9 +22,16 @@ public class Challenge {
             if (o instanceof CharSequence) {
                 int val = 0;
                 CharSequence charSequence = (CharSequence) o;
+                boolean minus = false;
                 for (int j = 0; j < charSequence.length(); j++) {
+                    if(charSequence.charAt(j) == '-'){
+                        minus = true;
+                    }
                     int d = charSequence.charAt(j) - '0';
                     val = val * 10 + d;
+                }
+                if(minus) {
+                    val *= -1;
                 }
                 ret[i] = val;
             }
