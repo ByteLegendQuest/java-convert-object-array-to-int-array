@@ -29,7 +29,7 @@ public class Challenge {
                 } else if (objects[x] instanceof BigInteger) {
                     result[x] = ((BigInteger) objects[x]).intValue();
                 } else if (objects[x] instanceof BigDecimal) {
-                    result[x] = ((BigDecimal) objects[x]).intValue();
+                    result[x] = ((BigDecimal) objects[x]).intValue(); 
                 }
             } else {
                 if (objects[x] instanceof String)
