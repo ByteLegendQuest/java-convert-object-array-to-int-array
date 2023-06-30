@@ -13,17 +13,6 @@ public class Challenge {
      * <p>For example, input `[1, 2.0, 3.1, "4.999"]`, the output is `[1, 2, 3, 4]`.
      */
     public static int[] convert(Object[] objects) {
-        int[] result = new int[objects.length];
-        for (int i = 0; i < objects.length; i++) {
-            Object o = objects[i];
-            if (o instanceof Number) {
-                Number number = (Number) o;
-                result[i] = number.intValue();
-            } else if (o instanceof CharSequence) {
-                CharSequence c = (CharSequence) o;
-                result[i] = Integer.parseInt(c.toString());
-            }
-        }
-        return result;
+        return null;
     }
 }
